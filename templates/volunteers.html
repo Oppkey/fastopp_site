@@ -58,7 +58,7 @@
 
                     <!-- Core Technologies -->
                     <div class="mb-16">
-                        <h3 class="text-2xl font-bold mb-8 text-gray-900 text-center">Core Technologies</h3>
+                        <h3 class="text-4xl font-bold mb-8 text-gray-900 text-center">Core Technologies</h3>
                         <div class="grid md:grid-cols-2 gap-8">
                             <!-- FastAPI -->
                             <div class="bg-gray-50 p-8 rounded-xl">
@@ -68,10 +68,10 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                         </svg>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-gray-900">FastAPI</h4>
+                                    <h4 class="text-2xl font-semibold text-gray-900">FastAPI</h4>
                                 </div>
-                                <p class="text-gray-600 mb-4">Modern, high-performance Python web framework</p>
-                                <ul class="space-y-2 text-sm text-gray-600">
+                                <p class="text-lg text-gray-600 mb-4">Modern, high-performance Python web framework</p>
+                                <ul class="space-y-2 text-base text-gray-600">
                                     <li class="flex items-start">
                                         <span class="text-ai-blue mr-2">•</span>
                                         Automatic API documentation generation
@@ -99,10 +99,10 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                                         </svg>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-gray-900">PostgreSQL + SQLite</h4>
+                                    <h4 class="text-2xl font-semibold text-gray-900">PostgreSQL + SQLite</h4>
                                 </div>
-                                <p class="text-gray-600 mb-4">Professional database management</p>
-                                <ul class="space-y-2 text-sm text-gray-600">
+                                <p class="text-lg text-gray-600 mb-4">Professional database management</p>
+                                <ul class="space-y-2 text-base text-gray-600">
                                     <li class="flex items-start">
                                         <span class="text-purple-500 mr-2">•</span>
                                         Vector database support with pgvector
@@ -126,10 +126,10 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                         </svg>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-gray-900">pgvector</h4>
+                                    <h4 class="text-2xl font-semibold text-gray-900">pgvector</h4>
                                 </div>
-                                <p class="text-gray-600 mb-4">Vector database for AI</p>
-                                <ul class="space-y-2 text-sm text-gray-600">
+                                <p class="text-lg text-gray-600 mb-4">Vector database for AI</p>
+                                <ul class="space-y-2 text-base text-gray-600">
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">•</span>
                                         Store and query embeddings
@@ -153,10 +153,10 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                         </svg>
                                     </div>
-                                    <h4 class="text-xl font-semibold text-gray-900">OpenRouter API</h4>
+                                    <h4 class="text-2xl font-semibold text-gray-900">OpenRouter API</h4>
                                 </div>
-                                <p class="text-gray-600 mb-4">Multi-model AI access</p>
-                                <ul class="space-y-2 text-sm text-gray-600">
+                                <p class="text-lg text-gray-600 mb-4">Multi-model AI access</p>
+                                <ul class="space-y-2 text-base text-gray-600">
                                     <li class="flex items-start">
                                         <span class="text-orange-500 mr-2">•</span>
                                         Drop-in replacement for OpenAI API
@@ -176,46 +176,119 @@
 
                     <!-- Modern Web Technologies -->
                     <div class="mb-16">
-                        <h3 class="text-2xl font-bold mb-8 text-gray-900 text-center">Modern Web Technologies</h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-blue-50 p-6 rounded-lg">
-                                <h4 class="font-semibold text-blue-900 mb-2">HTMX</h4>
-                                <p class="text-sm text-blue-700">Dynamic web interfaces without JavaScript frameworks</p>
+                        <h3 class="text-4xl font-bold mb-8 text-gray-900 text-center">Demonstration of Modern Web Technologies</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- HTMX Feature -->
+                            <div class="group" x-data="{ hovered: false }" 
+                                 @mouseenter="hovered = true" 
+                                 @mouseleave="hovered = false">
+                                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl transition-all duration-300"
+                                     :class="hovered ? 'shadow-xl scale-105' : 'shadow-lg'">
+                                    <div class="w-16 h-16 bg-ai-blue rounded-lg flex items-center justify-center mb-6">
+                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-4 text-gray-900">HTMX Integration</h4>
+                                    <p class="text-gray-600">
+                                        Real-time communication with the server using HTMX for seamless chat experience without page refreshes.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="bg-purple-50 p-6 rounded-lg">
-                                <h4 class="font-semibold text-purple-900 mb-2">Alpine.js</h4>
-                                <p class="text-sm text-purple-700">Lightweight reactive JavaScript</p>
+
+                            <!-- Alpine.js Feature -->
+                            <div class="group" x-data="{ hovered: false }" 
+                                 @mouseenter="hovered = true" 
+                                 @mouseleave="hovered = false">
+                                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl transition-all duration-300"
+                                     :class="hovered ? 'shadow-xl scale-105' : 'shadow-lg'">
+                                    <div class="w-16 h-16 bg-ai-purple rounded-lg flex items-center justify-center mb-6">
+                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-4 text-gray-900">Alpine.js Magic</h4>
+                                    <p class="text-gray-600">
+                                        Reactive UI components and smooth animations powered by Alpine.js for an interactive chat experience.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="bg-cyan-50 p-6 rounded-lg">
-                                <h4 class="font-semibold text-cyan-900 mb-2">Tailwind CSS</h4>
-                                <p class="text-sm text-cyan-700">Utility-first CSS framework</p>
+
+                            <!-- Tailwind Feature -->
+                            <div class="group" x-data="{ hovered: false }" 
+                                 @mouseenter="hovered = true" 
+                                 @mouseleave="hovered = false">
+                                <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl transition-all duration-300"
+                                     :class="hovered ? 'shadow-xl scale-105' : 'shadow-lg'">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center mb-6">
+                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-4 text-gray-900">Tailwind CSS</h4>
+                                    <p class="text-gray-600">
+                                        Beautiful, responsive design with utility-first CSS framework for a modern and polished interface.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="bg-pink-50 p-6 rounded-lg">
-                                <h4 class="font-semibold text-pink-900 mb-2">DaisyUI</h4>
-                                <p class="text-sm text-pink-700">Component library for rapid UI development</p>
+
+                            <!-- DaisyUI Feature -->
+                            <div class="group" x-data="{ hovered: false }" 
+                                 @mouseenter="hovered = true" 
+                                 @mouseleave="hovered = false">
+                                <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-xl transition-all duration-300"
+                                     :class="hovered ? 'shadow-xl scale-105' : 'shadow-lg'">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-4 text-gray-900">DaisyUI Components</h4>
+                                    <p class="text-gray-600">
+                                        Professional chat bubbles, buttons, and form elements with built-in theming and responsive design.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- OpenRouter Feature -->
+                            <div class="group" x-data="{ hovered: false }" 
+                                 @mouseenter="hovered = true" 
+                                 @mouseleave="hovered = false">
+                                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl transition-all duration-300"
+                                     :class="hovered ? 'shadow-xl scale-105' : 'shadow-lg'">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-4 text-gray-900">OpenRouter</h4>
+                                    <p class="text-gray-600">
+                                        AI gateway for developers providing a single, standardized API to access LLMs from multiple providers.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Development Tools -->
                     <div>
-                        <h3 class="text-2xl font-bold mb-8 text-gray-900 text-center">Development Tools</h3>
+                        <h3 class="text-4xl font-bold mb-8 text-gray-900 text-center">Development Tools</h3>
                         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div class="bg-gray-50 p-6 rounded-lg text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2">uv</h4>
-                                <p class="text-sm text-gray-600">Fast Python package manager</p>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">uv</h4>
+                                <p class="text-base text-gray-600">Fast Python package manager</p>
                             </div>
                             <div class="bg-gray-50 p-6 rounded-lg text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2">Alembic</h4>
-                                <p class="text-sm text-gray-600">Database migration management</p>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">Alembic</h4>
+                                <p class="text-base text-gray-600">Database migration management</p>
                             </div>
                             <div class="bg-gray-50 p-6 rounded-lg text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2">SQLModel</h4>
-                                <p class="text-sm text-gray-600">SQL databases in Python with type safety</p>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">SQLModel</h4>
+                                <p class="text-base text-gray-600">SQL databases in Python with type safety</p>
                             </div>
                             <div class="bg-gray-50 p-6 rounded-lg text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2">FastAPI Users</h4>
-                                <p class="text-sm text-gray-600">Authentication and user management</p>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">FastAPI Users</h4>
+                                <p class="text-base text-gray-600">Authentication and user management</p>
                             </div>
                         </div>
                     </div>
@@ -241,3 +314,4 @@
     </div>
 </body>
 </html>
+
