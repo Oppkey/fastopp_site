@@ -4,7 +4,7 @@
 
 This site is a clean, modern promotion website for FastOpp, built with the same technology stack as the main FastOpp framework.
 
-It is intended to introduce you to the FastOpp project. We are looking for volunteers!
+It is intended to introduce you to the FastOpp project. We are looking for student developers!
 
 ## Where all the magic is
 
@@ -14,7 +14,7 @@ Go here to see the FastOpp project:
 
 Go here to see:
 
-* [Call for Volunteers](https://fastopp-site.fly.dev/volunteers)
+* [Call for Students](https://fastopp-site.fly.dev/students)
 * [Project Description](https://fastopp-site.fly.dev/project)
 * [Documentation](https://fastopp-site.fly.dev/documentation)
 * [Tutorials](https://fastopp-site.fly.dev/tutorials)
