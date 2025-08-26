@@ -22,13 +22,13 @@ async def read_root(request: Request):
     })
 
 
-@router.get("/volunteers", response_class=HTMLResponse)
-async def volunteers(request: Request):
-    """Volunteers page"""
-    return templates.TemplateResponse("volunteers.html", {
+@router.get("/students", response_class=HTMLResponse)
+async def students(request: Request):
+    """Students page"""
+    return templates.TemplateResponse("students.html", {
         "request": request,
-        "title": "Call For Volunteers - FastOpp",
-        "current_page": "volunteers"
+        "title": "Call For Students - FastOpp",
+        "current_page": "students"
     })
 
 
