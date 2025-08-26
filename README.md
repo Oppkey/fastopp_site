@@ -16,5 +16,5 @@ Go here to see:
 
 * [Call for Volunteers](https://fastopp-site.fly.dev/volunteers)
 * [Project Description](https://fastopp-site.fly.dev/project)
-* [https://fastopp-site.fly.dev/documentation](https://fastopp-site.fly.dev/documentation)
+* [Documentation](https://fastopp-site.fly.dev/documentation)
 * [Tutorials](https://fastopp-site.fly.dev/tutorials)
