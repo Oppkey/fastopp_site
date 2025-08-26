@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Database files
+test.db
+test.db.*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# MacOS files
+**/.DS_Store
