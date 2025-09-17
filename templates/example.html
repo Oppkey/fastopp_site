@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/favicon.ico') }}">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js CDN -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ai-blue': '#3B82F6',
+                        'ai-purple': '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        {% include 'partials/header.html' %}
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-br from-indigo-500 to-cyan-500 text-white py-20">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl font-bold mb-6">FastOpp Live Example</h1>
+                    <p class="text-xl mb-8">
+                        AI Chat with Conversation Management
+                    </p>
+                    <p class="text-lg">
+                        This example demonstrates intelligent conversation management, automatic title generation, persistent chat history, and hybrid search using vector and SQL databases.
+                    </p>
+                    <div class="mt-8">
+                        <a href="https://fastfolder.fly.dev/" 
+                           class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" target="_blank">
+                            Live Demonstration Site
+                        </a>
+                        <p class="text-sm text-indigo-100 mt-3">
+                            The live demo site may be sleeping. It may take up to a minute to wake up.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">
+                        Key Features
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Conversation Management -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">Intelligent Conversation Management</h3>
+                            <p class="text-gray-600 mb-6">
+                                Advanced conversation flow management with context awareness and intelligent responses.
+                            </p>
+                        </div>
+
+                        <!-- Automatic Title Generation -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">Automatic Title Generation</h3>
+                            <p class="text-gray-600 mb-6">
+                                AI-powered automatic generation of conversation titles for better organization and navigation.
+                            </p>
+                        </div>
+
+                        <!-- Persistent Chat History -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">Persistent Chat History</h3>
+                            <p class="text-gray-600 mb-6">
+                                Complete conversation history storage with efficient retrieval and management capabilities.
+                            </p>
+                        </div>
+
+                        <!-- Hybrid Search -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">Hybrid Search System</h3>
+                            <p class="text-gray-600 mb-6">
+                                Advanced search combining vector database semantic search with SQL full-text search capabilities.
+                            </p>
+                        </div>
+
+                        <!-- Vector Database -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">Vector Database Integration</h3>
+                            <p class="text-gray-600 mb-6">
+                                Semantic search capabilities using vector embeddings for intelligent content retrieval.
+                            </p>
+                        </div>
+
+                        <!-- SQL Full-Text Search -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900">SQL Full-Text Search</h3>
+                            <p class="text-gray-600 mb-6">
+                                Traditional full-text search capabilities for precise keyword matching and filtering.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">
+                        Technical Implementation
+                    </h2>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-900">Built with FastOpp Architecture</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            This example demonstrates how to extend the base FastOpp application with advanced AI chat capabilities. 
+                            It showcases the Model-View-Service (MVS) architecture in action with real-world features.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4 text-gray-900">Key Technologies</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                                        FastAPI with async/await support
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                                        PostgreSQL with full-text search
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                                        Vector database for semantic search
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                                        AI model integration for chat
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                                        Real-time streaming responses
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4 text-gray-900">Student Learning Benefits</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                        Hands-on AI integration experience
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                        Database design and optimization
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                        Modern Python async patterns
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                        Production-ready architecture
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                        Real-world project portfolio
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold mb-8 text-gray-900">Ready to Explore?</h2>
+                    <p class="text-lg mb-8 text-gray-600">
+                        This example shows how FastOpp can be extended with advanced AI capabilities. 
+                        Perfect for students learning modern web development with AI integration.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://github.com/codetricity/chat-with-history/blob/main/README.md" 
+                           class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors" target="_blank">
+                            View Full Documentation on GitHub
+                        </a>
+                        <a href="/students" 
+                           class="inline-block bg-gradient-to-r from-indigo-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-cyan-600 transition-colors">
+                            Join FastOpp as Student
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {% include 'partials/footer.html' %}
+    </div>
+</body>
+</html>

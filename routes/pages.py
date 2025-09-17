@@ -148,6 +148,16 @@ async def marketing_demo(request: Request):
     })
 
 
+@router.get("/example", response_class=HTMLResponse)
+async def example(request: Request):
+    """Example page"""
+    return templates.TemplateResponse("example.html", {
+        "request": request,
+        "title": "Example - FastOpp",
+        "current_page": "example"
+    })
+
+
 @router.get("/license")
 async def license_page(request: Request):
     """License page"""
