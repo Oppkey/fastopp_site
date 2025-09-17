@@ -26,6 +26,9 @@ load_dotenv()
 # Get secret key from environment
 SECRET_KEY = os.getenv("SECRET_KEY", "dev_secret_key_change_in_production")
 
+# Get Google Analytics tracking ID from environment
+GA_TRACKING_ID = os.getenv("GA_TRACKING_ID")
+
 # Create upload directories
 UPLOAD_DIR = Path("static/uploads")
 UPLOAD_DIR.mkdir(exist_ok=True)
@@ -40,6 +43,16 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Templates
 templates = Jinja2Templates(directory="templates")
+
+# Add global template variables
+@app.middleware("http")
+async def add_global_template_vars(request: Request, call_next):
+    response = await call_next(request)
+    return response
+
+# Make GA tracking ID available to all templates
+templates.env.globals["ga_tracking_id"] = GA_TRACKING_ID
+
 security = HTTPBasic()
 
 # Setup admin interface

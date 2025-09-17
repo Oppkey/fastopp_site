@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/favicon.ico') }}">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Alpine.js CDN -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'ai-blue': '#3B82F6',
-                        'ai-purple': '#8B5CF6'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-50">
-    <div class="min-h-screen flex flex-col">
-        {% include 'partials/header.html' %}
+{% extends "base.html" %}
 
-        <!-- Main Content -->
-        <main class="flex-grow">
+{% block content %}
             <!-- Hero Section -->
             <section class="bg-gradient-to-br from-purple-500 to-pink-500 text-white py-20">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -237,10 +207,5 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        {% include 'partials/footer.html' %}
-    </div>
-</body>
-</html>
+{% endblock %}
 

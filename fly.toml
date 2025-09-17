@@ -11,9 +11,9 @@ primary_region = 'sjc'
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = false
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
   processes = ['app']
 
 [[vm]]
@@ -21,17 +21,9 @@ primary_region = 'sjc'
 
 [env]
   ENVIRONMENT = "production"
+  GA_TRACKING_ID = "G-94L1867Z0G"
 
 [[mounts]]
   source = "data"
   destination = "/data"
 
-[[services]]
-  internal_port = 8000
-  protocol = "tcp"
-  [[services.ports]]
-    port = 80
-    handlers = ["http"]
-  [[services.ports]]
-    port = 443
-    handlers = ["tls", "http"]
